@@ -1,18 +1,23 @@
 dataset/
 
-artifacts/checkpoints
-artifacts/yolo
+artifacts/checkpoints/
+artifacts/yolo/
 
 venv/
 
 private/
 
 model/yolov8n.pt
-
-
 *.pt
+
 __pycache__/
 *.pyc
+*.pyo
+
 .env
+
 node_modules/
 frontend/node_modules/
+
+.idea/
+*.iml
