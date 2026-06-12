@@ -4,7 +4,7 @@ import ResultPanel from './components/ResultPanel/ResultPanel'
 import DetectionPanel from './components/DetectionPanel/DetectionPanel'
 import StatusBar from './components/StatusBar/StatusBar'
 
-const API_BASE = 'http://localhost:8000'
+const API_BASE = import.meta.env.VITE_API_BASE || 'http://localhost:8000'
 
 export default function App() {
   const [health, setHealth] = useState(null)
