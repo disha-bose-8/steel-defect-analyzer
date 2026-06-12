@@ -1,14 +1,8 @@
 dataset/
 
-artifacts/checkpoints/
-artifacts/yolo/
-
 venv/
 
 private/
-
-model/yolov8n.pt
-*.pt
 
 __pycache__/
 *.pyc
@@ -21,3 +15,20 @@ frontend/node_modules/
 
 .idea/
 *.iml
+
+# Ignore YOLO training outputs
+artifacts/yolo/train/
+
+# Keep deployment models
+!artifacts/checkpoints/
+!artifacts/checkpoints/best_model.pth
+!artifacts/checkpoints/class_names.json
+
+!artifacts/yolo/train/weights/
+!artifacts/yolo/train/weights/best.pt
+
+!model/yolov8n.pt
+
+# Ignore unwanted checkpoints
+epoch*.pt
+last.pt
