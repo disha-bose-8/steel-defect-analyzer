@@ -1,2 +1,2 @@
 [phases.setup]
-nixPkgs = ["python312", "libxcb"]
+nixPkgs = ["python312", "xorg.libxcb"]
