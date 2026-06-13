@@ -86,8 +86,8 @@ if os.path.exists(YOLO_CHECKPOINT):
         yolo_model       = YOLO(YOLO_CHECKPOINT)
         yolo_class_names = list(yolo_model.names.values())
         print(f"[YOLO] Loaded — {len(yolo_class_names)} classes: {yolo_class_names}")
-    except ImportError:
-        print("[YOLO] ultralytics not installed. Run: pip install ultralytics")
+    except ImportError as e:
+        print(f"[YOLO] import failed: {e}")
     except Exception as e:
         print(f"[YOLO] Failed to load: {e}")
 else:
